@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VAJRA — Writer &amp; Director</title>
+<meta name="description" content="VAJRA — Telugu writer and director. Director of the short film MATTI, developing the feature SPARSHA.">
+<meta property="og:title" content="VAJRA — Writer &amp; Director">
+<meta property="og:description" content="Telugu writer-director. Watch the short film MATTI. Discover SPARSHA, a feature in development.">
+<meta property="og:image" content="https://vajra-rosy.vercel.app/img/matti-veiled-idol.jpg">
+<meta property="og:url" content="https://vajra-rosy.vercel.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://vajra-rosy.vercel.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23F3EEE3'/%3E%3Ctext x='32' y='47' font-family='Courier New,monospace' font-weight='700' font-size='46' text-anchor='middle' fill='%23C8321E'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Caveat:wght@500;700&family=Tiro+Telugu&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3EEE3; --paper-2:#FBF8F1; --ink:#1B1A18; --ink-2:#3E3A33; --muted:#5E584E; --rule:#D9CFBF;
+  --pen:#C8321E; --clay:#A8452A;
+  --night:#12201C; --night-2:#1B2D27; --night-ink:#ECE6D6; --night-muted:#A9B5AC; --brass:#C9A45C; --night-rule:#2F4440;
+  --mono:'Courier Prime', 'Courier New', monospace; --hand:'Caveat', cursive; --te:'Tiro Telugu', serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--pen);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 14px;z-index:20}
+.skip:focus{left:8px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:rgba(243,238,227,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+.nav-in{max-width:1240px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.24em;text-decoration:none;font-size:18px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:6px;flex-wrap:wrap}
+.nav ul a{display:inline-block;padding:8px 12px;font-size:14px;letter-spacing:.12em;text-decoration:none;min-height:40px}
+.nav ul a:hover{color:var(--pen)}
+
+/* scene scaffold */
+.scene{position:relative;padding:96px 28px}
+.wrap{max-width:1240px;margin:0 auto;position:relative}
+.scene::before{content:"";position:absolute;left:max(12px, calc(50% - 680px));top:0;bottom:0;width:1px;background:var(--rule)}
+.sc-no{position:absolute;top:100px;font-weight:700;font-size:16px}
+.sc-no.l{left:max(0px, calc(50% - 700px))}
+.sc-no.r{right:max(8px, calc(50% - 700px))}
+.slug{font-weight:700;font-size:19px;letter-spacing:.04em;margin:0 0 28px}
+h2.big{font-family:var(--mono);font-weight:700;font-size:clamp(28px,3.6vw,44px);line-height:1.2;margin:0 0 28px;letter-spacing:.01em}
+.note{font-family:var(--hand);font-weight:700;color:var(--pen);font-size:clamp(24px,2.6vw,32px);line-height:1.15;display:inline-block;transform:rotate(-2deg)}
+.transition{text-align:right;font-weight:700;margin-top:48px;letter-spacing:.04em}
+.dialogue{max-width:620px;margin:0 0 0 clamp(0px,9vw,140px)}
+.dialogue .who{display:block;margin-left:clamp(60px,14vw,180px);font-weight:700}
+.dialogue .paren{display:block;margin-left:clamp(30px,8vw,100px);font-style:italic}
+.label{font-size:13px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+
+/* taped prints */
+.print{position:relative;background:var(--paper-2);border:1px solid var(--rule);padding:10px 10px 4px;box-shadow:0 8px 22px rgba(27,26,24,.14);margin:0}
+.print::before{content:"";position:absolute;top:-11px;left:50%;width:96px;height:22px;margin-left:-48px;background:rgba(214,198,160,.82);transform:rotate(-3deg)}
+.print img{width:100%;height:auto;object-fit:cover;aspect-ratio:var(--ar,16/9)}
+.print figcaption{font-family:var(--hand);font-size:22px;color:var(--ink-2);padding:4px 4px 2px}
+.t1{transform:rotate(-1.5deg)}.t2{transform:rotate(1.2deg)}.t3{transform:rotate(-.6deg)}.t4{transform:rotate(1.8deg)}
+
+/* hero */
+.hero{min-height:calc(100vh - 66px);display:flex;flex-direction:column;justify-content:center;padding-top:72px;padding-bottom:72px}
+.hero .action{max-width:720px}
+.title-block{text-align:center;margin:72px 0 48px;position:relative}
+.title-block h1{font-family:var(--mono);font-weight:700;font-size:clamp(64px,13vw,168px);letter-spacing:.18em;line-height:1;margin:0;padding-left:.18em;position:relative;display:inline-block}
+.title-block h1 svg{position:absolute;left:-6%;top:-28%;width:112%;height:156%;pointer-events:none}
+.title-block .by{letter-spacing:.32em;font-size:clamp(14px,1.8vw,22px);margin-top:18px}
+.title-block .te{font-family:var(--te);font-size:clamp(28px,3.4vw,44px);color:var(--clay);margin-top:6px;line-height:1.3}
+.hero-notes{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.hero-film{margin:64px -28px 0;background:#000;padding:clamp(18px,3vw,40px) 0}
+.hero-film img{width:100%;aspect-ratio:2.36/1;object-fit:cover}
+.hero-film p{color:#bdb5a7;font-size:13px;letter-spacing:.2em;text-align:center;margin:14px 0 0}
+
+/* filmmaker */
+.two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,88px);align-items:start}
+.two .print img{--ar:4/5}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+.facts div{border-top:1px solid var(--ink);padding-top:12px;font-size:16px}
+
+/* shot list */
+.shotlist{width:100%;border-collapse:collapse;font-size:16px;margin:8px 0 48px}
+.shotlist th{text-align:left;font-weight:400;font-size:13px;letter-spacing:.16em;color:var(--muted);border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 12px 10px 0}
+.shotlist td{border-bottom:1px dashed #B9AE9A;padding:14px 16px 14px 0;vertical-align:top}
+.shotlist td:first-child{font-weight:700;width:70px}
+.shotlist td:nth-child(2){font-weight:700;width:34%}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+
+/* matti */
+.matti-head{display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}
+.matti-head h2{font-size:clamp(60px,9vw,120px);letter-spacing:.14em;margin:0;line-height:1}
+.matti-head .te{font-family:var(--te);font-size:clamp(40px,5vw,68px);color:var(--clay);line-height:1.3}
+.meta{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;font-size:15px;margin:20px 0 28px}
+.stamp{display:inline-flex;align-items:center;min-height:52px;padding:12px 24px;border:2.5px solid var(--pen);color:var(--pen);font-weight:700;letter-spacing:.16em;text-decoration:none;transform:rotate(-2deg);font-size:16px;background:transparent}
+.stamp:hover{background:var(--pen);color:var(--paper)}
+.matti-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:start}
+.film-frame{background:#000;padding:10px 0}
+.film-frame img{width:100%;aspect-ratio:2.36/1;object-fit:cover}
+.notes3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:72px}
+.notes3 .print img{--ar:4/3}
+.notes3 h3{font-size:18px;margin:18px 0 6px}
+.notes3 .n{font-size:13px;letter-spacing:.16em;color:var(--pen);font-weight:700;margin-top:20px}
+.notes3 p{font-size:16px;margin:0;color:var(--ink-2)}
+
+/* call sheet */
+.callsheet{border:2px solid var(--ink);font-size:16px}
+.callsheet .hd{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--ink);color:var(--paper);padding:10px 16px;font-weight:700;letter-spacing:.14em;font-size:14px}
+.callsheet .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding:10px 16px;border-bottom:1px dashed #B9AE9A}
+.callsheet .row:last-child{border-bottom:0}
+.callsheet .row span:first-child{color:var(--muted)}
+.callsheet .row span:last-child{font-weight:700}
+.bts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}
+
+/* night: sparsha */
+.night{background:var(--night);color:var(--night-ink)}
+.night::before{background:#2C3D37}
+.night .label{color:var(--night-muted)}
+.night .print{background:var(--night-2);border-color:#34483F;box-shadow:0 10px 28px rgba(0,0,0,.4)}
+.night .print::before{background:rgba(201,164,92,.45)}
+.night .print figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--night-muted);padding:8px 4px 6px}
+.redline{height:3px;background:var(--pen);margin:40px calc(-1 * max(28px, (100vw - 1240px)/2))}
+.sp-title .te{font-family:var(--te);font-size:clamp(72px,11vw,150px);line-height:1.15;color:var(--brass)}
+.sp-title h2{font-size:clamp(32px,4.4vw,54px);letter-spacing:.3em;margin:0}
+.sp-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:start}
+.titlecard{border-top:2px solid var(--brass);padding-top:16px;margin-top:36px}
+.titlecard .label{color:var(--brass);font-weight:700}
+.craft{width:100%;border-collapse:collapse;font-size:16px;margin-top:8px}
+.craft th{text-align:left;font-weight:400;font-size:13px;letter-spacing:.16em;color:var(--night-muted);border-bottom:1px solid var(--night-ink);padding:10px 12px 10px 0}
+.craft td{border-bottom:1px dashed #34483F;padding:12px 16px 12px 0;vertical-align:top}
+.craft td:first-child{font-weight:700;color:var(--brass);width:200px}
+.concepts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:56px}
+.stamp.brass{border-color:var(--brass);color:var(--brass)}
+.stamp.brass:hover{background:var(--brass);color:var(--night)}
+.night .note{color:var(--brass)}
+
+/* development */
+.dev{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.titlepage{background:var(--paper-2);border:1px solid var(--rule);box-shadow:0 8px 22px rgba(27,26,24,.1);padding:28px 32px 32px}
+.titlepage .art{position:relative}
+.titlepage .art img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.titlepage .art span{position:absolute;left:8px;bottom:8px;font-size:11px;letter-spacing:.16em;background:rgba(27,26,24,.78);color:var(--paper);padding:3px 8px}
+.titlepage h3{text-align:center;font-size:clamp(28px,3vw,38px);letter-spacing:.12em;margin:24px 0 4px}
+.titlepage h3 .te{font-family:var(--te);color:var(--clay);font-weight:400;letter-spacing:0;margin-left:12px;font-size:.8em}
+.titlepage .label{text-align:center;display:block;margin-bottom:14px}
+.titlepage p{font-size:16px;margin:0}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:start}
+.contact dl{display:grid;grid-template-columns:200px 1fr;gap:10px 16px;border-top:2px solid var(--ink);padding-top:20px;margin:40px 0 0;font-size:17px}
+.contact dt{color:var(--muted)}
+.contact dd{margin:0;word-break:break-word}
+.contact dd a{text-decoration-color:var(--pen);text-underline-offset:3px}
+.fade{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:.06em}
+footer{border-top:1px solid var(--rule);padding:28px;text-align:center;font-size:13px;letter-spacing:.14em;color:var(--muted)}
+
+/* cta + player */
+.ctas{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+.stamp.solid{background:var(--pen);color:var(--paper)}
+.stamp.solid:hover{background:#A3271A;border-color:#A3271A}
+.player{position:relative;background:#000;margin:0 0 28px;aspect-ratio:16/9;overflow:hidden}
+.player button{all:unset;cursor:pointer;position:absolute;inset:0;display:block}
+.player button img{width:100%;height:100%;object-fit:cover;opacity:.82;transition:opacity .2s}
+.player button:hover img,.player button:focus-visible img{opacity:1}
+.player .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:14px;background:var(--pen);color:var(--paper);font-family:var(--mono);font-weight:700;letter-spacing:.16em;padding:16px 26px;font-size:16px}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.player-note{font-size:13px;letter-spacing:.14em;color:var(--muted);margin:-16px 0 28px}
+.pattern{border-left:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 0;margin:0 0 36px;font-size:19px;max-width:900px}
+.others{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.other{display:grid;grid-template-columns:200px minmax(0,1fr);gap:22px;align-items:start}
+.other img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.other h3{font-size:24px;letter-spacing:.1em;margin:0 0 4px}
+.other h3 .te{font-family:var(--te);color:var(--clay);font-weight:400;letter-spacing:0;margin-left:10px;font-size:.8em}
+.other p{font-size:15px;margin:8px 0 0}
+.other .tag{font-size:11px;letter-spacing:.16em;color:var(--muted)}
+.inquiry{border:2px solid var(--brass);padding:24px 28px;margin-top:56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.inquiry p{margin:0;max-width:640px}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:56px}
+.concepts.four{grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+
+/* responsive */
+@media (max-width: 900px){
+  body{font-size:17px}
+  .scene{padding:72px 22px}
+  .sc-no{display:none}
+  .scene::before{display:none}
+  .two,.matti-grid,.sp-grid,.contact,.dev{grid-template-columns:minmax(0,1fr)}
+  .trio,.pair,.notes3,.concepts,.concepts.four,.others{grid-template-columns:minmax(0,1fr)}
+  .other{grid-template-columns:120px minmax(0,1fr)}
+  .bts{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .two .print{max-width:440px}
+  .shotlist td:nth-child(2){width:auto}
+  .shotlist thead{display:none}
+  .shotlist tr{display:block;border-bottom:1px dashed #B9AE9A;padding:12px 0}
+  .shotlist td{display:block;border:0;padding:2px 0}
+  .craft td:first-child{width:auto}
+  .contact dl{grid-template-columns:minmax(0,1fr)}
+  .contact dt{margin-top:8px}
+  .redline{margin-left:-22px;margin-right:-22px}
+  .hero-film{margin-left:-22px;margin-right:-22px}
+  .nav ul a{padding:8px 8px;font-size:13px}
+}
+@media (max-width: 520px){
+  .bts{grid-template-columns:minmax(0,1fr)}
+  .nav ul{width:100%;overflow-x:auto;flex-wrap:nowrap}
+  .nav ul a{white-space:nowrap}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#filmmaker">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="#top">VAJRA</a>
+    <ul>
+      <li><a href="#watch">WATCH MATTI</a></li>
+      <li><a href="#matti">MATTI</a></li>
+      <li><a href="#sparsha">SPARSHA</a></li>
+      <li><a href="#development">OTHER STORIES</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- 1 · HERO -->
+<header class="scene hero">
+  <span class="sc-no l" aria-hidden="true">1</span><span class="sc-no r" aria-hidden="true">1</span>
+  <div class="wrap">
+    <p style="margin:0 0 18px">FADE IN:</p>
+    <p class="slug">EXT. TELUGU CINEMA — FIRST LIGHT</p>
+    <p class="action">Telugu storytelling · MATTI (2026) · SPARSHA — feature in development.</p>
+
+    <div class="title-block">
+      <h1>VAJRA<svg aria-hidden="true" viewBox="0 0 760 230" preserveAspectRatio="none"><path d="M40 120 C 40 30, 700 10, 725 105 C 748 190, 120 225, 60 160 C 30 128, 90 70, 170 52" fill="none" stroke="#C8321E" stroke-width="4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></h1>
+      <div class="by">WRITER &amp; DIRECTOR</div>
+      <div class="te" lang="te">వజ్ర</div>
+      <div class="ctas"><a class="stamp solid" href="#watch">▶ WATCH MATTI</a><a class="stamp" href="#sparsha">DISCOVER SPARSHA →</a></div>
+    </div>
+
+    <div class="hero-notes">
+      <div class="dialogue" style="margin-left:0">
+        <span class="who">VAJRA (V.O.)</span>
+        An unusual idea draws you in. An emotion makes you stay.
+      </div>
+      <span class="note" style="text-align:right">MATTI — shot &amp; done ✓<br>SPARSHA — next.</span>
+    </div>
+  </div>
+  <figure class="hero-film">
+    <img src="img/matti-boys-apart.jpg" alt="Frame from MATTI: four boys sit apart on red earth inside a bamboo-and-tarp workshop" width="1600" height="678">
+    <p>FROM MATTI (2026) · A SHORT FILM BY VAJRA</p>
+  </figure>
+</header>
+
+<!-- 2 · FILMMAKER -->
+<section class="scene" id="filmmaker" aria-labelledby="h-filmmaker">
+  <span class="sc-no l" aria-hidden="true">2</span><span class="sc-no r" aria-hidden="true">2</span>
+  <div class="wrap">
+    <p class="slug">INT. THE FILMMAKER — DAY</p>
+    <div class="two">
+      <figure class="print t1">
+        <img src="img/vajra-portrait.jpg" alt="VAJRA in a maroon shirt beside the camera on the MATTI set" width="808" height="1200" loading="lazy" style="--ar:4/5;object-position:30% 30%">
+        <figcaption>on the MATTI set</figcaption>
+      </figure>
+      <div>
+        <h2 class="big" id="h-filmmaker">STORIES THAT ENTERTAIN.<br>EMOTIONS THAT REMAIN.</h2>
+        <p>We meet VAJRA, a Telugu writer-director who has taken a short film from page to screen and is now developing his first feature.</p>
+        <div class="dialogue">
+          <span class="who">VAJRA</span>
+          I am drawn to stories built around unusual ideas with deeply human consequences.
+          <span class="paren">(beat)</span>
+          For me, the strongest cinematic moments come when an extraordinary premise reveals something ordinary and true about love, loss, belonging or human connection.
+        </div>
+        <div class="facts">
+          <div><b>MATTI</b> — taken from writing through production and post-production.</div>
+          <div><b>SPARSHA</b> — a folklore-driven emotional feature about love, time and the meaning of human touch.</div>
+        </div>
+        <p style="text-align:right;margin-top:28px"><span class="note">one made. one in the making. →</span></p>
+      </div>
+    </div>
+    <p class="transition">CUT TO:</p>
+  </div>
+</section>
+
+<!-- 3 · APPROACH -->
+<section class="scene" id="approach" aria-labelledby="h-approach" style="padding-top:24px">
+  <span class="sc-no l" aria-hidden="true" style="top:28px">3</span><span class="sc-no r" aria-hidden="true" style="top:28px">3</span>
+  <div class="wrap">
+    <p class="slug">INT. THE DIRECTOR'S NOTEBOOK — CONTINUOUS</p>
+    <h2 class="big" id="h-approach">ORDINARY THINGS. UNUSUAL RULES.<br>HUMAN CONSEQUENCES.</h2>
+    <p class="pattern">My stories take something familiar, introduce one unusual rule, and follow its emotional consequences. In <b>MATTI</b>, every home must give an equal handful of soil, rich or poor. In <b>SPARSHA</b>, a forest's laws force two people to confront time, separation and love.</p>
+    <table class="shotlist">
+      <thead><tr><th scope="col">SHOT</th><th scope="col">PRINCIPLE</th><th scope="col">IN PRACTICE</th></tr></thead>
+      <tbody>
+        <tr><td>01</td><td>STORY BEFORE SPECTACLE</td><td>A scene must work emotionally before camera, edit or music lift it.</td></tr>
+        <tr><td>02</td><td>VISUALS BEYOND DIALOGUE</td><td>In MATTI, community is shown by hands mixing soil, not by a speech about it.</td></tr>
+        <tr><td>03</td><td>PERFORMANCES THAT FEEL REAL</td><td>Children who behave like children; a sculptor who says less than he feels.</td></tr>
+        <tr><td>04</td><td>COMMERCIAL IMPACT WITH PURPOSE</td><td>Big moments grow from character, so humour, tension and payoff feel earned.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 4 · MATTI -->
+<section class="scene" id="matti" aria-labelledby="h-matti">
+  <span class="sc-no l" aria-hidden="true">4</span><span class="sc-no r" aria-hidden="true">4</span>
+  <div class="wrap">
+    <p class="slug">EXT. COLONY STREET — GANESH CHATURTHI — DAY</p>
+    <div class="matti-head"><h2 class="big" id="h-matti">MATTI</h2><span class="te" lang="te">మట్టి</span></div>
+    <p style="margin:8px 0 0">An independent Telugu short film · Written, Directed, Produced &amp; Edited by <b>VAJRA</b></p>
+    <div class="meta"><span>GENRE: Emotional Drama / Family</span><span>LANGUAGE: Telugu</span><span>YEAR: 2026</span></div>
+    <div class="matti-grid">
+      <div>
+        <p>A group of children set out to make a grand Ganesh idol for their neighbourhood with barely enough money. A traditional clay sculptor offers them an unusual solution: bring one handful of soil from every home.</p>
+        <p>What begins as a playful celebration becomes a story about togetherness, memory and the emotional power of something as ordinary as clay.</p>
+        <p style="margin:28px 0 36px"><span class="note">at its heart: something made together means more than its form.</span></p>
+      </div>
+      <div id="watch">
+        <div class="player" id="player">
+          <button type="button" id="play-matti" aria-label="Play MATTI, the full short film">
+            <img src="img/matti-veiled-idol.jpg" alt="" width="1600" height="678">
+            <span class="play">▶ PLAY MATTI</span>
+          </button>
+        </div>
+        <p class="player-note">FULL SHORT FILM · TELUGU · <a href="https://youtu.be/uAuOnfV6zT0" target="_blank" rel="noopener">OPEN ON YOUTUBE</a></p>
+      </div>
+    </div>
+
+    <div class="pair">
+      <figure class="print t1"><img src="img/matti-threshold.jpg" alt="MATTI: Raghavayya alone, framed between tarpaulin walls" width="1600" height="678" loading="lazy" style="--ar:16/10;object-position:48% 45%"><figcaption>before: one man, closed in</figcaption></figure>
+      <figure class="print t2"><img src="img/matti-four-boys.jpg" alt="MATTI: four boys smiling together under the workshop lights" width="1600" height="678" loading="lazy" style="--ar:16/10"><figcaption>after: the children change the room</figcaption></figure>
+    </div>
+
+        <h3 class="slug" style="margin-top:96px;margin-bottom:0">INT. RAGHAVAYYA'S WORKSHOP — DAY</h3>
+    <h2 class="big" style="margin-top:12px;margin-bottom:0">LET THE AUDIENCE DISCOVER THE EMOTION.</h2>
+    <p style="max-width:640px;color:var(--ink-2)">Built on one contrast: a lively group of children, and a restrained, inward-looking sculptor.</p>
+    <div class="notes3">
+      <div>
+        <figure class="print t1"><img src="img/matti-raghavayya.jpg" alt="MATTI: Raghavayya holds a clay bowl in his workshop, background soft" width="1600" height="678" loading="lazy" style="object-position:58% 40%"></figure>
+        <div class="n">DIRECTOR'S NOTE 1</div>
+        <h3>CHARACTER THROUGH COMPOSITION</h3>
+        <p>The workshop is an enclosed, quieter world set against the lively street outside: the space shows his emotional distance.</p>
+      </div>
+      <div>
+        <figure class="print t2"><img src="img/matti-hands-soil.jpg" alt="MATTI: many hands mixing soil from different homes in one bowl" width="1600" height="678" loading="lazy" style="object-position:58% 50%"></figure>
+        <div class="n">DIRECTOR'S NOTE 2</div>
+        <h3>MEANING THROUGH ACTION</h3>
+        <p>Every household gives an equal handful of soil. Their differences become one creation: community shown in action, not explained in dialogue.</p>
+      </div>
+      <div>
+        <figure class="print t3"><img src="img/matti-veiled-idol.jpg" alt="MATTI: the unfinished idol veiled in a soil-stained cloth" width="1600" height="678" loading="lazy" style="object-position:50% 60%"></figure>
+        <div class="n">DIRECTOR'S NOTE 3</div>
+        <h3>RESTRAINT BEFORE RELEASE</h3>
+        <p>From humour and noise toward silence. Music, framing and performance let key moments land without exaggeration.</p>
+      </div>
+    </div>
+    <p class="transition">MATCH CUT TO:</p>
+  </div>
+</section>
+
+<!-- 5 · BEHIND THE SCENES -->
+<section class="scene" id="bts" aria-labelledby="h-bts" style="padding-top:24px">
+  <span class="sc-no l" aria-hidden="true" style="top:28px">5</span><span class="sc-no r" aria-hidden="true" style="top:28px">5</span>
+  <div class="wrap">
+    <p class="slug">EXT. MATTI LOCATION — WRAP — DUSK</p>
+    <div class="two">
+      <div>
+        <h2 class="big" id="h-bts">INDEPENDENT FILMMAKING.<br>COLLABORATIVE EXECUTION.</h2>
+        <p>I developed MATTI from screenplay to final edit, leading its direction and production in collaboration with a committed creative team: turning the script into a shot plan, guiding the young cast, working closely with the cinematographer and AD, and shaping the film through the edit, sound and colour.</p>
+        <div class="callsheet" style="margin:28px 0">
+          <div class="hd"><span>CALL SHEET — MATTI</span><span>SUREKHA PRODUCTIONS</span></div>
+          <div class="row"><span>CINEMATOGRAPHY</span><span>Lalith Kumar</span></div>
+          <div class="row"><span>MUSIC, SOUND &amp; MIX</span><span>Ahan</span></div>
+          <div class="row"><span>DI / COLOUR</span><span>Srikanth</span></div>
+          <div class="row"><span>1ST ASSISTANT DIRECTOR</span><span>Raju Diamond</span></div>
+          <div class="row"><span>WRITER · DIRECTOR · EDITOR</span><span>VAJRA</span></div>
+        </div>
+        <span class="note" style="font-size:26px">what I take forward: preparation, clear communication, purposeful coverage, and everyone knowing the emotion of the scene.</span>
+      </div>
+      <div class="bts">
+        <figure class="print t2"><img src="img/vajra-directing.jpg" alt="VAJRA directing beside the gimbal camera among Ganesh idols" width="1600" height="900" loading="lazy" style="--ar:4/3;object-position:75% 40%"><figcaption>directing MATTI</figcaption></figure>
+        <figure class="print t1"><img src="img/bts-lighting.jpg" alt="MATTI set in the idol workshop: softbox lights and camera on tripod" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>lighting the workshop</figcaption></figure>
+        <figure class="print t3"><img src="img/bts-monitor.jpg" alt="Monitor framing three boys in the field, camera operator in foreground" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>the boys, on monitor</figcaption></figure>
+        <figure class="print t4"><img src="img/bts-music.jpg" alt="Post-production music session in a dark studio" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>post: the music session</figcaption></figure>
+      </div>
+    </div>
+    <p class="transition">CUT TO BLACK.</p>
+  </div>
+</section>
+
+<!-- 6 · SPARSHA (NIGHT) -->
+<section class="scene night" id="sparsha" aria-labelledby="h-sparsha">
+  <span class="sc-no l" aria-hidden="true">6</span><span class="sc-no r" aria-hidden="true">6</span>
+  <div class="wrap">
+    <p class="slug">EXT. THE FOREST THRESHOLD — MAHALAYA AMAVASYA — NIGHT</p>
+    <div class="sp-title">
+      <div class="te" lang="te">స్పర్శ</div>
+      <div style="display:flex;align-items:baseline;gap:24px;flex-wrap:wrap"><h2 class="big" id="h-sparsha" style="margin:0">SPARSHA</h2><span class="label">FEATURE · IN DEVELOPMENT</span></div>
+    </div>
+    <div class="redline" aria-hidden="true"></div>
+    <div class="sp-grid">
+      <div>
+        <p style="font-size:20px">A young bell-maker disappears into a forbidden forest and returns twenty-one years later without having aged a day.</p>
+        <p style="color:#D3D8CF">His mother has grown old. His friends are middle-aged. And the woman he loved, someone he has never once touched, is missing. A love that has waited twenty-one years now has to face a reunion that time may not allow.</p>
+        <div class="titlecard">
+          <span class="label">(TITLE CARD)</span>
+          <p style="font-size:19px;margin:8px 0 0">What happens when the people you love have lived twenty-one years without you, but for you, almost no time has passed?</p>
+        </div>
+        <p class="label" style="margin-top:28px">WRITTEN &amp; TO BE DIRECTED BY VAJRA · TELUGU · FOLKLORE / ROMANCE / EMOTIONAL DRAMA</p>
+      </div>
+      <figure class="print t2"><img src="img/sparsha-forest.jpg" alt="Concept art: a dark forest under a pale moon, a thin red line across the ground" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>CONCEPT ART — THE FOREST</figcaption></figure>
+    </div>
+
+    <h3 class="slug" style="margin-top:96px;margin-bottom:0">EXT. THE VILLAGE, BY THE FOREST — CONTINUOUS</h3>
+    <h2 class="big" style="margin-top:12px">THE FOREST CREATES THE MYSTERY.<br>PEOPLE CREATE THE EMOTION.</h2>
+    <p style="max-width:760px;color:#D3D8CF">The forest drives the story, but its heart is a love that has never known touch: Yugandhar, Meena, and the people who waited twenty-one years for him.</p>
+    <table class="craft">
+      <thead><tr><th scope="col">DEPARTMENT</th><th scope="col">APPROACH</th></tr></thead>
+      <tbody>
+        <tr><td>WORLD</td><td>A believable village and its traditions, against an ancient forest whose mystery stays unexplained.</td></tr>
+        <tr><td>PERFORMANCE</td><td>Grounded characters whose relationships give meaning to the extraordinary premise.</td></tr>
+        <tr><td>VISUAL LANGUAGE</td><td>One consistent colour world, restrained compositions, deliberate contrasts of isolation and connection.</td></tr>
+        <tr><td>SOUND &amp; MUSIC</td><td>Organic village ambience, recurring bells, and a score that builds to earned moments.</td></tr>
+        <tr><td>AUDIENCE</td><td>Curiosity draws them in. Love, longing and connection stay after it ends.</td></tr>
+      </tbody>
+    </table>
+    <div class="concepts four">
+      <figure class="print t3"><img src="img/sparsha-untouched.jpg" alt="Concept art: two figures at the forest edge reaching toward each other, a small light between their hands that never meet" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>CONCEPT — NEVER TOUCHED</figcaption></figure>
+      <figure class="print t1"><img src="img/sparsha-village.jpg" alt="Concept art: village huts at dusk with lamps lit" width="1600" height="900" loading="lazy" style="--ar:4/3;object-position:50% 70%"><figcaption>CONCEPT — THE VILLAGE</figcaption></figure>
+      <figure class="print t2"><img src="img/sparsha-threshold.jpg" alt="Concept art: lamplit ground meets the dark forest wall at a red line" width="1600" height="900" loading="lazy" style="--ar:4/3;object-position:45% 70%"><figcaption>CONCEPT — THE THRESHOLD</figcaption></figure>
+      <figure class="print t3"><img src="img/sparsha-bell.jpg" alt="Concept art: a brass bell glowing in darkness" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>CONCEPT — THE BELL</figcaption></figure>
+    </div>
+    <div class="inquiry">
+      <p><span class="label" style="color:var(--brass);font-weight:700">DEVELOPMENT STAGE</span><br>Master story and high-level screenplay structure completed. Full screenplay in development. Open to conversations with producing partners.</p>
+      <a class="stamp brass" href="mailto:rajeshsahuiitk@gmail.com?subject=SPARSHA%20%E2%80%94%20synopsis%20request">REQUEST THE SYNOPSIS →</a>
+    </div>
+    <p style="text-align:right;margin-top:24px"><span class="note">my feature debut.</span></p>
+  </div>
+</section>
+
+<!-- 7 · OTHER STORIES -->
+<section class="scene" id="development" aria-labelledby="h-dev" style="padding-top:72px;padding-bottom:48px">
+  <span class="sc-no l" aria-hidden="true" style="top:76px">7</span><span class="sc-no r" aria-hidden="true" style="top:76px">7</span>
+  <div class="wrap">
+    <p class="slug">INT. THE WRITERS' ROOM — LATE NIGHT</p>
+    <h2 class="big" id="h-dev" style="font-size:clamp(24px,2.6vw,32px)">OTHER STORIES ON THE DESK</h2>
+    <div class="others">
+      <article class="other">
+        <img src="img/repu-busstop.jpg" alt="Development art: four silhouettes at a bus stop at dawn" width="1600" height="900" loading="lazy">
+        <div><h3>REPU<span class="te" lang="te">రేపు</span></h3><span class="tag">SHORT FILM · HUMAN DRAMA · DEVELOPMENT ART</span>
+        <p>Four strangers who share a bus stop every morning, and have never spoken, slowly find connection. A story about loneliness, companionship and the possibility of tomorrow.</p></div>
+      </article>
+      <article class="other">
+        <img src="img/lso-phone.jpg" alt="Development art: a phone glowing with an incoming video call in a dark room" width="1600" height="900" loading="lazy">
+        <div><h3>LAST SEEN ONLINE</h3><span class="tag">FEATURE · EMOTIONAL TECHNO-THRILLER · DEVELOPMENT ART</span>
+        <p>A woman who has died suddenly appears online and video-calls the man who loved her. A story about grief, AI, identity and the danger of refusing to let go.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · CONTACT -->
+<section class="scene" id="contact" aria-labelledby="h-contact" style="padding-top:24px">
+  <span class="sc-no l" aria-hidden="true" style="top:28px">8</span><span class="sc-no r" aria-hidden="true" style="top:28px">8</span>
+  <div class="wrap">
+    <p class="slug">EXT. TELUGU CINEMA — THE NEXT REEL — DAWN</p>
+    <div class="contact">
+      <div>
+        <h2 class="big" id="h-contact">LET'S MAKE CINEMA.</h2>
+        <div class="dialogue">
+          <span class="who">VAJRA</span>
+          I want to make cinema that is accessible in its storytelling, distinctive in its ideas and lasting in its emotional impact.
+          <span class="paren">(beat)</span>
+          With MATTI completed, I am developing SPARSHA as my feature directorial debut. I welcome conversations with producers interested in bringing this story to the screen.
+        </div>
+        <dl>
+          <dt>EMAIL</dt><dd><a href="mailto:rajeshsahuiitk@gmail.com?subject=Hello%20VAJRA">rajeshsahuiitk@gmail.com</a></dd>
+          <dt>SPARSHA</dt><dd><a href="mailto:rajeshsahuiitk@gmail.com?subject=SPARSHA%20%E2%80%94%20synopsis%20request">Request the synopsis</a></dd>
+          <dt>PHONE</dt><dd><a href="tel:+917844881976">+91 78448 81976</a></dd>
+          <dt>LOCATION</dt><dd>Vizag, Andhra Pradesh</dd>
+          <dt>WATCH MATTI</dt><dd><a href="https://youtu.be/uAuOnfV6zT0" target="_blank" rel="noopener">youtu.be/uAuOnfV6zT0</a></dd>
+          <dt>INSTAGRAM</dt><dd><a href="https://www.instagram.com/vajradirector/" target="_blank" rel="noopener">@vajradirector</a></dd>
+        </dl>
+      </div>
+      <div>
+        <figure class="print t2"><img src="img/bts-camera-team.jpg" alt="The MATTI camera team with a young actor among Ganesh idols" width="1600" height="900" loading="lazy" style="--ar:4/5;object-position:58% 50%"><figcaption>to be continued on the big screen.</figcaption></figure>
+        <p class="fade" style="text-align:right;margin-top:40px">FADE OUT.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>VAJRA · WRITER &amp; DIRECTOR · TELUGU CINEMA · © 2026</footer>
+<script>
+(function(){
+  var b=document.getElementById('play-matti'); if(!b) return;
+  b.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/uAuOnfV6zT0?autoplay=1&rel=0';
+    f.title='MATTI — a Telugu short film by VAJRA';
+    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+    f.allowFullscreen=true;
+    var p=document.getElementById('player'); p.innerHTML=''; p.appendChild(f);
+  });
+})();
+</script>
+</body>
+</html>
