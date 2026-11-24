@@ -39,6 +39,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--pen);outline-offset
 .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:6px;flex-wrap:wrap}
 .nav ul a{display:inline-block;padding:8px 12px;font-size:14px;letter-spacing:.12em;text-decoration:none;min-height:40px}
 .nav ul a:hover{color:var(--pen)}
+.nav ul a.nav-cta{background:var(--pen);color:var(--paper);margin-left:8px;padding:8px 14px}
+.nav ul a.nav-cta:hover{background:#A3271A;color:var(--paper)}
 
 /* scene scaffold */
 .scene{position:relative;padding:96px 28px}
@@ -233,11 +235,11 @@ footer{border-top:1px solid var(--rule);padding:28px;text-align:center;font-size
     <a class="brand" href="#top">VAJRA</a>
     <ul>
       <li><a href="#filmmaker">ABOUT</a></li>
-      <li><a href="#watch">WATCH MATTI</a></li>
       <li><a href="#matti">MATTI</a></li>
       <li><a href="#sparsha">SPARSHA</a></li>
       <li><a href="#development">OTHER STORIES</a></li>
       <li><a href="#contact">CONTACT</a></li>
+      <li><a class="nav-cta" href="#watch">▶ WATCH MATTI</a></li>
     </ul>
   </div>
 </nav>
