@@ -123,7 +123,7 @@ h2.big{font-family:var(--mono);font-weight:700;font-size:clamp(28px,3.6vw,44px);
 .night .print::before{background:rgba(201,164,92,.45)}
 .night .print figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--night-muted);padding:8px 4px 6px}
 .redline{height:3px;background:var(--pen);margin:40px calc(-1 * max(28px, (100vw - 1240px)/2))}
-.sp-title .te{font-family:var(--te);font-size:clamp(72px,11vw,150px);line-height:1.15;color:var(--brass)}
+.sp-title .te{font-family:var(--te);font-size:clamp(72px,11vw,150px);line-height:1.2;padding-bottom:.42em;color:var(--brass)}
 .sp-title h2{font-size:clamp(32px,4.4vw,54px);letter-spacing:.3em;margin:0}
 .sp-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:start}
 .titlecard{border-top:2px solid var(--brass);padding-top:16px;margin-top:36px}
@@ -181,6 +181,9 @@ footer{border-top:1px solid var(--rule);padding:28px;text-align:center;font-size
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:56px}
 .concepts.four{grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
 
+.sp-strip{margin:0 0 56px}
+.sp-strip img{width:100%;aspect-ratio:2.39/1;object-fit:cover}
+.sp-strip figcaption{font-size:12px;letter-spacing:.16em;color:var(--night-muted);margin-top:10px}
 /* laurels */
 .laurels{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 18px;margin-top:44px}
 .laurel{display:flex;align-items:center;gap:4px}
@@ -422,6 +425,10 @@ footer{border-top:1px solid var(--rule);padding:28px;text-align:center;font-size
       <div style="display:flex;align-items:baseline;gap:24px;flex-wrap:wrap"><h2 class="big" id="h-sparsha" style="margin:0">SPARSHA</h2><span class="label">FEATURE · IN DEVELOPMENT</span></div>
     </div>
     <div class="redline" aria-hidden="true"></div>
+    <figure class="sp-strip">
+      <img src="img/sp-procession.jpg" alt="Concept art: at dusk, villagers and a drummer watch cattle with bells walk past torches across a red line into a dark forest" width="1800" height="753" loading="lazy">
+      <figcaption>CONCEPT ART — MAHALAYA AMAVASYA: THE CATTLE WALK INTO THE FOREST</figcaption>
+    </figure>
     <div class="sp-grid">
       <div>
         <p style="font-size:20px">A young bell-maker disappears into a forbidden forest and returns twenty-one years later without having aged a day.</p>
@@ -432,7 +439,7 @@ footer{border-top:1px solid var(--rule);padding:28px;text-align:center;font-size
         </div>
         <p class="label" style="margin-top:28px">WRITTEN &amp; TO BE DIRECTED BY VAJRA · TELUGU · FOLKLORE / ROMANCE / EMOTIONAL DRAMA</p>
       </div>
-      <figure class="print t2"><img src="img/sparsha-forest.jpg" alt="Concept art: a dark forest under a pale moon, a thin red line across the ground" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>CONCEPT ART — THE FOREST</figcaption></figure>
+      <figure class="print t2"><img src="img/sp-village-dusk.jpg" alt="Concept art: a village at dusk beside a dark forest wall, cattle grazing near the threshold" width="1800" height="753" loading="lazy" style="--ar:4/3;object-position:28% 50%"><figcaption>CONCEPT ART — THE VILLAGE AND THE FOREST</figcaption></figure>
     </div>
 
     <h3 class="slug" style="margin-top:96px;margin-bottom:0">EXT. THE VILLAGE, BY THE FOREST — CONTINUOUS</h3>
@@ -449,10 +456,10 @@ footer{border-top:1px solid var(--rule);padding:28px;text-align:center;font-size
       </tbody>
     </table>
     <div class="concepts four">
-      <figure class="print t3"><img src="img/sparsha-untouched.jpg" alt="Concept art: two figures at the forest edge reaching toward each other, a small light between their hands that never meet" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>CONCEPT — NEVER TOUCHED</figcaption></figure>
-      <figure class="print t1"><img src="img/sparsha-village.jpg" alt="Concept art: village huts at dusk with lamps lit" width="1600" height="900" loading="lazy" style="--ar:4/3;object-position:50% 70%"><figcaption>CONCEPT — THE VILLAGE</figcaption></figure>
-      <figure class="print t2"><img src="img/sparsha-threshold.jpg" alt="Concept art: lamplit ground meets the dark forest wall at a red line" width="1600" height="900" loading="lazy" style="--ar:4/3;object-position:45% 70%"><figcaption>CONCEPT — THE THRESHOLD</figcaption></figure>
-      <figure class="print t3"><img src="img/sparsha-bell.jpg" alt="Concept art: a brass bell glowing in darkness" width="1600" height="900" loading="lazy" style="--ar:4/3"><figcaption>CONCEPT — THE BELL</figcaption></figure>
+      <figure class="print t3"><img src="img/sp-reaching-hands.jpg" alt="Concept art: at a firelit ritual dance, two rows of dancers reach toward each other, hands never meeting" width="1800" height="753" loading="lazy" style="--ar:4/3;object-position:50% 45%"><figcaption>CONCEPT — NEVER TOUCHED</figcaption></figure>
+      <figure class="print t1"><img src="img/sp-bellmaker.jpg" alt="Concept art: an old mother sits in a bell-maker's workshop beneath hanging bells, tally marks on the wall" width="1800" height="753" loading="lazy" style="--ar:4/3;object-position:62% 60%"><figcaption>CONCEPT — THE BELL-MAKER'S HOME</figcaption></figure>
+      <figure class="print t2"><img src="img/sp-teacher.jpg" alt="Concept art: an old schoolteacher sits before a wall covered in chalk equations" width="1800" height="753" loading="lazy" style="--ar:4/3;object-position:35% 50%"><figcaption>CONCEPT — THE SCHOOLTEACHER</figcaption></figure>
+      <figure class="print t3"><img src="img/sp-festival.jpg" alt="Concept art: villagers preparing for a festival, a dancer painting his face blue" width="1800" height="753" loading="lazy" style="--ar:4/3;object-position:30% 55%"><figcaption>CONCEPT — FESTIVAL MORNING</figcaption></figure>
     </div>
     <div class="inquiry">
       <p><span class="label" style="color:var(--brass);font-weight:700">DEVELOPMENT STAGE</span><br>SPARSHA is in screenplay development, with its master story and narrative structure completed. The project is open to discussions with producing partners.</p>
